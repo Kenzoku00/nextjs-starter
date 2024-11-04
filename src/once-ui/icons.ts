@@ -5,6 +5,7 @@ import {
 	HiChevronDown,
 	HiChevronRight,
 	HiChevronLeft,
+	HiArrowUpRight,
 	HiOutlineArrowPath,
 	HiCheck,
 	HiMiniQuestionMarkCircle,
@@ -15,15 +16,28 @@ import {
 	HiEyeDropper,
 	HiOutlineLink,
 	HiExclamationTriangle,
-	HiArrowUpRight,
+	
 	HiInformationCircle,
 	HiExclamationCircle,
 	HiCheckCircle,
+	HiMiniGlobeAsiaAustralia,
+	HiEnvelope,
+	HiCalendarDays
 } from "react-icons/hi2";
 
 import {
+	PiHouseDuotone,
+	PiUserCircleDuotone,
+	PiGridFourDuotone,
+	PiBookBookmarkDuotone,
+	PiImageDuotone
+} from "react-icons/pi";
+
+import {
 	FaDiscord,
-	FaGithub
+	FaGithub,
+	FaLinkedin,
+	FaXTwitter
 } from "react-icons/fa6";
 
 export const iconLibrary: Record<string, IconType> = {
@@ -32,19 +46,25 @@ export const iconLibrary: Record<string, IconType> = {
 	chevronRight: HiChevronRight,
 	chevronLeft: HiChevronLeft,
 	refresh: HiOutlineArrowPath,
+	arrowUpRight: HiArrowUpRight,
 	check: HiCheck,
 	helpCircle: HiMiniQuestionMarkCircle,
 	infoCircle: HiInformationCircle,
 	warningTriangle: HiExclamationTriangle,
 	errorCircle: HiExclamationCircle,
 	checkCircle: HiCheckCircle,
-	eyeDropper: HiEyeDropper,
-	person: HiMiniUser,
+	email: HiEnvelope,
+	globe: HiMiniGlobeAsiaAustralia,
+	person: PiUserCircleDuotone,
+	grid: PiGridFourDuotone,
+	book: PiBookBookmarkDuotone,
 	close: HiMiniXMark,
 	openLink: HiOutlineLink,
+	calendar: HiCalendarDays,
+	home: PiHouseDuotone,
+	gallery: PiImageDuotone,
 	discord: FaDiscord,
 	github: FaGithub,
-	arrowUpRight: HiArrowUpRight,
-	minus: HiMiniMinus,
-	plus: HiMiniPlus,
+	linkedin: FaLinkedin,
+	x: FaXTwitter,
 };

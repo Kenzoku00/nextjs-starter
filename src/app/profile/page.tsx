@@ -1,7 +1,7 @@
 "use client";
 
 import React from 'react';
-import { Flex, Grid, Text, Button, Icon, Avatar } from '@/once-ui/components';
+import { Flex, Grid, Text, Button, Icon, Avatar, Heading } from '@/once-ui/components';
 import Link from 'next/link';
 
 export default function Profile() {
@@ -26,12 +26,13 @@ export default function Profile() {
     // Data diri
     const personalInfo = {
         name: "Ilyasa Daffa Saskara",
-        bio: "Web Developer & Designer",
+        bio: "Game Developer & Designer",
         location: "Jawa Timur, Indonesia",
         email: "ilyasadaffa2197@gmail.com",
         website: "www.ilyasadaffa.com",
         github: "https://github.com/Kenzoku00",
         linkedin: "https://www.linkedin.com/in/ilyasadaffasaskara/",
+        description: "Saya pelajar yang sedang belajar dalam dunia pengembangan game. Saya selalu berusaha untuk belajar hal baru dan mengasah keterampilan saya. Saya juga ikut berkolaborasi dengan rekan - rekan dalam proyek untuk mangasah keterampilan dan membantu satu sama lain dalam suatu proyek",
     };
 
     return (
@@ -81,12 +82,11 @@ export default function Profile() {
                     fillWidth
                     gap="l"
                 >
-                    {/* Kolom Kiri - Foto dan Lokasi */}
                     <Flex
                         direction="column"
                         alignItems="center"
                         gap="8"
-                        flex={1} // Membuat kolom kiri memiliki ukuran fleksibel
+                        flex={1} 
                     >
                         <Avatar
                             src="/images/p3.png"
@@ -97,17 +97,21 @@ export default function Profile() {
                         </Text>
                     </Flex>
 
-                    {/* Kolom Kanan - Nama, Bio, dan Tombol Sosial */}
                     <Flex
                         direction="column"
-                        flex={2} // Kolom kanan lebih besar
+                        flex={2} 
                         justifyContent="flex-start"
                         gap="8"
                     >
-                        <Text variant="body-strong-l" onBackground="neutral-strong">
+                        <Heading
+                            className="textAlign"
+                            variant="display-strong-l">
                             {personalInfo.name}
-                        </Text>
-                        <Text variant="body-default-m" onBackground="neutral-weak">
+                        </Heading>
+                        <Text
+                            className="textAlign"
+                            variant="display-default-s"
+                            onBackground="neutral-weak">
                             {personalInfo.bio}
                         </Text>
 
@@ -137,6 +141,15 @@ export default function Profile() {
                                 Email
                             </Button>
                         </Flex>
+
+                        <Text
+                            className="textAlign"
+                            variant="body-default-m"
+                            onBackground="neutral-weak"
+                            marginTop="m"
+                        >
+                            {personalInfo.description}
+                        </Text>
                     </Flex>
                 </Flex>
             </Flex>
