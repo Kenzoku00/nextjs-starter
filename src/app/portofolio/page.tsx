@@ -5,7 +5,7 @@ import styles from '@/components/about/about.module.scss';
 import Link from 'next/link';
 
 export async function generateMetadata() {
-    const title = "Profile Dao";
+    const title = "Portofolio | Ilyasa Daffa Saskara";
     const description = "This is the profile page.";
     const ogImage = `https://${baseURL}/og?title=${encodeURIComponent(title)}`;
 
