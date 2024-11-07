@@ -1,11 +1,10 @@
 "use client";
 
-import { mailchimp } from '@/app/resources'
+import { mailchimp } from '@/app/resources';
 import { Button, Flex, Heading, Input, Text } from '@/once-ui/components';
 import { Background } from '@/once-ui/components/Background';
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
-
 
 function debounce<T extends (...args: any[]) => void>(func: T, delay: number): T {
     let timeout: ReturnType<typeof setTimeout>;
@@ -59,6 +58,11 @@ export const Mailchimp = (
         }
     };
 
+    // Memastikan properti gradient, dots, dan lines adalah objek yang sesuai
+    const gradient = typeof mailchimp.effects.gradient === 'boolean' ? {} : mailchimp.effects.gradient;
+    const dots = typeof mailchimp.effects.dots === 'boolean' ? {} : mailchimp.effects.dots;
+    const lines = typeof mailchimp.effects.lines === 'boolean' ? {} : mailchimp.effects.lines;
+
     return (
         <Flex
             style={{overflow: 'hidden'}}
@@ -68,9 +72,10 @@ export const Mailchimp = (
             background="surface" border="neutral-medium" borderStyle="solid-1">
             <Background
                 position="absolute"
-                gradient={mailchimp.effects.gradient}
-                dots={mailchimp.effects.dots}
-                lines={mailchimp.effects.lines}/>
+                gradient={gradient}  // Menggunakan gradient yang sudah dipastikan tipe datanya
+                dots={dots}          // Menggunakan dots yang sudah dipastikan tipe datanya
+                lines={lines}        // Menggunakan lines yang sudah dipastikan tipe datanya
+            />
             <Heading style={{position: 'relative'}}
                 marginBottom="s"
                 variant="display-strong-xs">
