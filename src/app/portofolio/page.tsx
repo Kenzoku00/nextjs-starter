@@ -170,7 +170,6 @@ export default function About() {
                     gap="32"
                     direction="column" hide="s">
                     <TableOfContents structure={[ 
-                        { title: about.intro.title, display: about.intro.display, items: ["Introduction"] },
                         { title: about.work.title, display: about.work.display, items: about.work.projects.map(project => project.id) }
                     ]} 
                     about={about} />
@@ -178,39 +177,9 @@ export default function About() {
             )}
 
             <Flex fillWidth mobileDirection="column" justifyContent="center" className={styles.flexContainer}>
-                <Flex
-                    minWidth="160" paddingX="l" paddingBottom="xl" gap="m"
-                    flex={3} direction="column" alignItems="center" marginTop="128">
-                    <Avatar src={person.avatar} size="xl" />
-                    <Flex gap="8" alignItems="center">
-                        <Icon onBackground="accent-weak" name="globe" />
-                        {person.location}
-                    </Flex>
-                    {person.languages.length > 0 && (
-                        <Flex wrap gap="8">
-                            {person.languages.map((language, index) => (
-                                <Tag key={index} size="l">
-                                    {language}
-                                </Tag>
-                            ))}
-                        </Flex>
-                    )}
-                </Flex>
 
-                <Flex className={`${styles.blockAlign} ${styles.top}`} fillWidth flex={9} maxWidth={40} direction="column" id="Introduction">
-                    <Heading className={styles.textAlign} variant="display-strong-xl">
-                        {person.name}
-                    </Heading>
-                    <Text className={styles.textAlign} variant="display-default-xs" onBackground="neutral-weak" marginTop='s'>
-                        {person.role}
-                    </Text>
-
-                    {about.intro.display && (
-                        <Flex direction="column" textVariant="body-default-l" fillWidth gap="m" marginBottom="xl" marginTop='s' className={styles.rightleft}>
-                            {about.intro.description}
-                        </Flex>
-                    )}
-
+                <Flex className={`${styles.blockAlign} ${styles.top}`} fillWidth flex={9} direction="column" id="Introduction" >
+					
                     {about.work.display && (
                         <Flex direction="column" fillWidth gap="l" marginBottom="40" className={styles.rightleft}>
                             <Heading as="h2" id={about.work.title} variant="display-strong-s" marginBottom="m">
