@@ -1,4 +1,4 @@
-import { Avatar, Button, Flex, Heading, Icon, Tag, Text, Arrow, SmartImage } from '@/once-ui/components';
+import { Avatar, Button, Flex, Heading, Icon, Tag, Text, Arrow, SmartImage, LetterFx, InlineCode, } from '@/once-ui/components';
 import { baseURL } from '@/app/resources';
 import TableOfContents from '@/components/about/TableOfContents';
 import styles from '@/components/about/about.module.scss';
@@ -8,6 +8,24 @@ export async function generateMetadata() {
     const title = "Profile Dao";
     const description = "This is the profile page.";
     const ogImage = `https://${baseURL}/og?title=${encodeURIComponent(title)}`;
+
+    const links = [
+		{
+			href: "/home",
+			title: "Home",
+			description: "Halaman Awal.",
+		},
+		{
+			href: "/profile",
+			title: "Profile",
+			description: "Data diri saya.",
+		},
+        {
+			href: "/portofolio",
+			title: "Portofolio",
+			description: "Project Saya.",
+		},
+	];
 
     return {
         title,
@@ -48,6 +66,7 @@ export default function About() {
             display: true,
             projects: [
                 {
+                    id: "guess-strange-animal",
                     title: "Guess Strange Animal",
                     date: "Jan 2024 - Jan 2024",
                     role: "Game Design",
@@ -59,6 +78,7 @@ export default function About() {
                     images: ["/images/GSA/GSA 6.png"]
                 },
                 {
+                    id: "a-way-up",
                     title: "A Way Up",
                     date: "Jan 2024 - Feb 2024",
                     role: "Indie Developer",
@@ -69,6 +89,7 @@ export default function About() {
                     images: ["/images/AWU/AWU 1.png", "/images/AWU/AWU 2.png"]
                 },
                 {
+                    id: "lunc-zombies",
                     title: "Lunc Zombies",
                     date: "Mar 2024 - May 2024",
                     role: "Programmer",
@@ -79,6 +100,7 @@ export default function About() {
                     images: ["/images/LZ/LZ 1.png", "/images/LZ/LZ 2.png"]
                 },
                 {
+                    id: "bouncy-ball",
                     title: "Bouncy Ball",
                     date: "Jun 2024 - Agu 2024",
                     role: "Programmer",
@@ -89,6 +111,7 @@ export default function About() {
                     images: ["/images/BB/BB 1.png", "/images/BB/BB 2.png"]
                 },
                 {
+                    id: "chess-empire",
                     title: "Chess Empire",
                     date: "Agu 2024 - Sep 2024",
                     role: "Designer",
@@ -99,6 +122,7 @@ export default function About() {
                     images: ["/images/CE/CE 3.png", "/images/CE/CE 4.png"]
                 },
                 {
+                    id: "lost-case",
                     title: "Lost Case",
                     date: "Oct 2024 - Sekarang",
                     role: "Programmer dan Designer",
@@ -133,7 +157,7 @@ export default function About() {
                         variant="secondary">
                         <Flex alignItems="center">
                             Back To Home
-                            <Arrow trigger="#readDocs" />
+                            <Arrow trigger="#readDocs"/>
                         </Flex>
                     </Button>
                 </Flex>
@@ -146,8 +170,8 @@ export default function About() {
                     gap="32"
                     direction="column" hide="s">
                     <TableOfContents structure={[ 
-                        { title: about.intro.title, display: about.intro.display, items: [] },
-                        { title: about.work.title, display: about.work.display, items: about.work.projects.map(project => project.title) }
+                        { title: about.intro.title, display: about.intro.display, items: ["Introduction"] },
+                        { title: about.work.title, display: about.work.display, items: about.work.projects.map(project => project.id) }
                     ]} 
                     about={about} />
                 </Flex>
@@ -173,7 +197,7 @@ export default function About() {
                     )}
                 </Flex>
 
-                <Flex className={`${styles.blockAlign} ${styles.top}`} fillWidth flex={9} maxWidth={40} direction="column">
+                <Flex className={`${styles.blockAlign} ${styles.top}`} fillWidth flex={9} maxWidth={40} direction="column" id="Introduction">
                     <Heading className={styles.textAlign} variant="display-strong-xl">
                         {person.name}
                     </Heading>
@@ -195,7 +219,7 @@ export default function About() {
                             {about.work.projects.map((project, index) => (
                                 <Flex key={index} fillWidth direction="column" marginBottom="32">
                                     <Flex justifyContent="space-between" alignItems="center">
-                                        <Text variant="heading-strong-xl">
+                                        <Text variant="heading-strong-xl" id={project.id}>
                                             {project.title}
                                         </Text>
                                         <Text variant="body-default-s" style={{ color: 'gray' }}>

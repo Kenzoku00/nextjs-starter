@@ -17,6 +17,11 @@ export default function HomeRedirect() {
 			title: "Profile",
 			description: "Data diri saya.",
 		},
+        {
+			href: "/portofolio",
+			title: "Portofolio",
+			description: "Project Saya.",
+		},
 	];
 
 	return (
