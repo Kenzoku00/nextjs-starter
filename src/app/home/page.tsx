@@ -5,13 +5,8 @@ import React from 'react';
 import { Heading, Text, Flex, Button, Grid, Icon, InlineCode, Logo, Background, LetterFx, Arrow } from '@/once-ui/components';
 import Link from 'next/link';
 
-export default function HomeRedirect() {
+export default function Home() {
 	const links = [
-		{
-			href: "/home",
-			title: "Home",
-			description: "Halaman Awal.",
-		},
 		{
 			href: "/profile",
 			title: "Profile",
@@ -20,7 +15,12 @@ export default function HomeRedirect() {
         {
 			href: "/portofolio",
 			title: "Portofolio",
-			description: "Project Saya.",
+			description: "Rincian Project Saya.",
+		},
+		{
+			href: "https://github.com/Kenzoku00",
+			title: "GitHub",
+			description: "Profile GitHub Saya.",
 		},
 	];
 

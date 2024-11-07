@@ -8,11 +8,6 @@ import Link from 'next/link';
 export default function HomeRedirect() {
 	const links = [
 		{
-			href: "/home",
-			title: "Home",
-			description: "Halaman Awal.",
-		},
-		{
 			href: "/profile",
 			title: "Profile",
 			description: "Data diri saya.",
@@ -20,7 +15,12 @@ export default function HomeRedirect() {
         {
 			href: "/portofolio",
 			title: "Portofolio",
-			description: "Project Saya.",
+			description: "Rincian Project Saya.",
+		},
+		{
+			href: "https://github.com/Kenzoku00",
+			title: "GitHub",
+			description: "Profile GitHub Saya.",
 		},
 	];
 
