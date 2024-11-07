@@ -5,7 +5,7 @@ import styles from '@/components/about/about.module.scss';
 import Link from 'next/link';
 
 export async function generateMetadata() {
-    const title = "Profile";
+    const title = "Profile Dao";
     const description = "This is the profile page.";
     const ogImage = `https://${baseURL}/og?title=${encodeURIComponent(title)}`;
 
@@ -182,13 +182,13 @@ export default function About() {
                     </Text>
 
                     {about.intro.display && (
-                        <Flex direction="column" textVariant="body-default-l" fillWidth gap="m" marginBottom="xl" marginTop='s'>
+                        <Flex direction="column" textVariant="body-default-l" fillWidth gap="m" marginBottom="xl" marginTop='s' className={styles.rightleft}>
                             {about.intro.description}
                         </Flex>
                     )}
 
                     {about.work.display && (
-                        <Flex direction="column" fillWidth gap="l" marginBottom="40">
+                        <Flex direction="column" fillWidth gap="l" marginBottom="40" className={styles.rightleft}>
                             <Heading as="h2" id={about.work.title} variant="display-strong-s" marginBottom="m">
                                 {about.work.title}
                             </Heading>
