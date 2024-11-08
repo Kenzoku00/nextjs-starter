@@ -10,17 +10,17 @@ export default function HomeRedirect() {
 		{
 			href: "/profile",
 			title: "Profile",
-			description: "Data diri saya.",
+			description: "My Profile.",
 		},
         {
 			href: "/portofolio",
 			title: "Portofolio",
-			description: "Rincian Project Saya.",
+			description: "Detail Of My Project.",
 		},
 		{
 			href: "https://github.com/Kenzoku00",
 			title: "GitHub",
-			description: "Profile GitHub Saya.",
+			description: "My GitHub Profile.",
 		},
 	];
 
@@ -50,7 +50,7 @@ export default function HomeRedirect() {
 									width: 'fit-content',
 									padding: 'var(--static-space-8) var(--static-space-16)',
 									backdropFilter: 'blur(var(--static-space-1))'}}>
-								Website Portofolio
+								Portofolio Website
 							</InlineCode>
 							<Heading
 								wrap="balance"
@@ -67,7 +67,7 @@ export default function HomeRedirect() {
 								href="/profile"
 								variant="secondary">
 								<Flex alignItems="center">
-									Informasi Selengkapnya
+									Details Information
 									<Arrow trigger="#readDocs"/>
 								</Flex>
 							</Button>

@@ -71,9 +71,9 @@ export default function About() {
                     date: "Jan 2024 - Jan 2024",
                     role: "Game Design",
                     description: [
-                        "Game yang dibuat untuk event Global Game Jam Malang 2024.",
-                        "Game ini dibuat dalam waktu 3 hari, saya bertugas untuk mencari gambar hewan aneh dan merancang hint untuk game ini.",
-                        "Merupakan game teka teki bergambar, yang dimana nantinya pemain akan menebak berbagai gambar hewan aneh dengan hint yang tersedia."
+                        "Game created for the Global Game Jam Malang 2024 event.",
+                        "Developed within 3 days; my role was to source strange animal images and design hints for this game.",
+                        "A puzzle game where players guess various strange animal images using the available hints."
                     ],
                     images: ["/images/GSA/GSA 6.png"]
                 },
@@ -83,8 +83,8 @@ export default function About() {
                     date: "Jan 2024 - Feb 2024",
                     role: "Indie Developer",
                     description: [
-                        "Sebuah game petualangan 3D yang terinspirasi dari game Only Up.",
-                        "Pemain akan menjelajahi dunia mimpi yang di dalamnya terdapat berbagai rintangan untuk mencapai titik teratas.",
+                        "A 3D adventure game inspired by the game Only Up.",
+                        "Players will explore a dream world filled with various obstacles to reach the highest point.",
                     ],
                     images: ["/images/AWU/AWU 1.png", "/images/AWU/AWU 2.png"]
                 },
@@ -94,8 +94,8 @@ export default function About() {
                     date: "Mar 2024 - May 2024",
                     role: "Programmer",
                     description: [
-                        "Sebuah game petualangan platformer untuk windows.",
-                        "Pemain mempunyai misi untuk membunuh semua musuh dan mengalahkan boss di setiap level.",
+                        "A platformer adventure game for Windows.",
+                        "Players have the mission to eliminate all enemies and defeat the boss at each level.",
                     ],
                     images: ["/images/LZ/LZ 1.png", "/images/LZ/LZ 2.png"]
                 },
@@ -105,8 +105,8 @@ export default function About() {
                     date: "Jun 2024 - Agu 2024",
                     role: "Programmer",
                     description: [
-                        "Sebuah game puzzle 3D untuk platform mobile.",
-                        "Mengharuskan pemain untuk melewati level dengan menyelesaikan puzzle.",
+                        "A 3D puzzle game for mobile platforms.",
+                        "Players are required to complete levels by solving puzzles.",
                     ],
                     images: ["/images/BB/BB 1.png", "/images/BB/BB 2.png"]
                 },
@@ -116,8 +116,8 @@ export default function About() {
                     date: "Agu 2024 - Sep 2024",
                     role: "Designer",
                     description: [
-                        "Game yang terinspirasi dari game Shotgun King yang kami buat untuk platform mobile.",
-                        "Memiliki lore yang dalam dan menarik, mengharuskan player untuk meningkatkan senjata dan perlengkapan untuk memudahkan pemain dalam menyelesaikan setiap level.",
+                        "A game inspired by the game Shotgun King, developed for mobile platforms.",
+                        "Features a deep and engaging lore, requiring players to upgrade weapons and gear to make it easier to clear each level.",
                     ],
                     images: ["/images/CE/CE 3.png", "/images/CE/CE 4.png"]
                 },
@@ -127,8 +127,8 @@ export default function About() {
                     date: "Oct 2024 - Sekarang",
                     role: "Programmer dan Designer",
                     description: [
-                        "Game berbasis story, puzzle, dan horror yang mengharuskan pemain berperan sebagai seorang detektif untuk memecahkan suatu kasus.",
-                        "Pemain diharuskan mencari clue untuk menamatkan game ini seiring dengan berjalannya cerita.",
+                        "A story-based, puzzle, and horror game where players take on the role of a detective to solve a case.",
+                        "Players must find clues to complete the game as the story progresses.",
                     ],
                     images: ["/images/LS/LS 1.png", "/images/LS/LS 2.png"]
                 }

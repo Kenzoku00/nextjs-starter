@@ -50,7 +50,7 @@ export default function About() {
     const person = {
         name: "Ilyasa Daffa Saskara",
         role: "Game Developer",
-        location: "Jawa Timur, Indonesia",
+        location: "East Java, Indonesia",
         languages: ["English", "Indonesia"],
         avatar: "/images/p3.png"
     };
@@ -59,7 +59,7 @@ export default function About() {
         intro: {
             title: "Introduction",
             display: true,
-            description: "Saya pelajar yang sedang belajar dalam dunia pengembangan game. Saya selalu berusaha untuk belajar hal baru dan mengasah keterampilan saya. Saya juga ikut berkolaborasi dengan rekan - rekan dalam proyek untuk mengasah keterampilan dan membantu satu sama lain dalam suatu proyek."
+            description: "I am a student currently learning in the field of game development. I always strive to learn new things and sharpen my skills. I also collaborate with peers on projects to enhance our abilities and support one another throughout the process."
         },
         tableOfContent: {
             display: true,
